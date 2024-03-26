@@ -1,0 +1,5 @@
+[package]
+
+[dependencies]
+kam = { path = "../../" }
+
