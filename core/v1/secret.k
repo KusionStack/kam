@@ -16,8 +16,8 @@ schema Secret:
 
     Attributes
     ----------
-    type: str, default is Undefined, required.
-        Type of secret, used to facilitate programmatic handling of secret data.
+    category: str, default is Undefined, required.
+        Category of secret, used to facilitate programmatic handling of secret data.
     params: {str:str}, default is Undefined, optional.
         Collection of parameters used to facilitate programmatic handling of secret data.
     data: {str:str}, default is Undefined, optional.
@@ -27,10 +27,10 @@ schema Secret:
 
     Examples
     --------
-    import kam.workload.secret as sec
+    import kam.core.v1 as v1
 
-    basicAuth = sec.Secret {
-        type: "basic"
+    basicAuth = v1.Secret {
+        category: "basic"
         data: {
             "username": ""
             "password": ""
@@ -38,8 +38,8 @@ schema Secret:
     }
     """
 
-    # Types of secrets available to use.
-    type:                       "basic" | "token" | "opaque" | "certificate" | "external"
+    # Categories of secrets available to use.
+    category:                   "basic" | "token" | "opaque" | "certificate" | "external"
 
     # Params defines extra parameters used to customize secret handling.
     params?:                    {str:str}

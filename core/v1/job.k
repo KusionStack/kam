@@ -1,4 +1,4 @@
-schema Job(WorkloadBase):
+schema Job(Workload):
     """ Job is a kind of workload profile that describes how to run your application code. This
     is typically used for tasks that take from a few seconds to a few days to complete.
 
@@ -11,12 +11,11 @@ schema Job(WorkloadBase):
     --------
     Instantiate a job with busybox image and runs every hour
 
-    import kam.workload as wl
-    import kam.workload.container as c
+    import kam.core.v1 as v1
 
-    echoJob : wl.Job {
+    echoJob : v1.Job {
         containers: {
-            "busybox": c.Container{
+            "busybox": v1.Container{
                 image:   "busybox:1.28"
                 command: ["/bin/sh", "-c", "echo hello"]
             }
@@ -24,6 +23,9 @@ schema Job(WorkloadBase):
         schedule: "0 * * * *"
     }
     """
+
+    # The kind
+    kind:                       "job" = "job"
 
     # The scheduling strategy in Cron format.
     # More info: https://en.wikipedia.org/wiki/Cron.
