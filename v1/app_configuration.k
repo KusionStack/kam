@@ -1,4 +1,3 @@
-import v1.workload as wl
 
 schema AppConfiguration:
     """ AppConfiguration is a developer-centric definition that describes how to run an Application.
@@ -22,11 +21,11 @@ schema AppConfiguration:
     # Instantiate an App with a long-running service and its image is "nginx:v1"
 
     import kam as ac
-    import kam.workload as wl
-    import kam.workload.container as c
+    import catalog.workload.service as s
+    import catalog.workload.base.container as c
 
     helloworld : ac.AppConfiguration {
-        workload: wl.Service {
+        workload: s.Service {
             containers: {
                 "nginx": c.Container {
                     image: "nginx:v1"
@@ -37,7 +36,7 @@ schema AppConfiguration:
     """
 
     # Workload defines how to run your application code.
-    workload:                   wl.Service | wl.Job
+    workload:                   Workload
 
     # Accessories defines a collection of accessories that will be attached to the workload.
     accessories?:                {str:any}
