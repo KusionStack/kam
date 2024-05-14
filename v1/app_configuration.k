@@ -1,3 +1,4 @@
+import .workload as wl
 
 schema AppConfiguration:
     """ AppConfiguration is a developer-centric definition that describes how to run an Application.
@@ -6,7 +7,7 @@ schema AppConfiguration:
 
     Attributes
     ----------
-    workload: wl.Service | wl.Job, default is Undefined, required.
+    workload: wl.Workload, default is Undefined, required.
         Workload defines how to run your application code. Currently supported workload profile
         includes Service and Job.
     accessories: {str:any}, default is Undefined, optional.
@@ -36,7 +37,7 @@ schema AppConfiguration:
     """
 
     # Workload defines how to run your application code.
-    workload:                   Workload
+    workload:                   wl.Workload
 
     # Accessories defines a collection of accessories that will be attached to the workload.
     accessories?:                {str:any}
