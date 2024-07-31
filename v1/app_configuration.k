@@ -7,7 +7,7 @@ schema AppConfiguration:
 
     Attributes
     ----------
-    workload: wl.Workload, default is Undefined, required.
+    workload: wl.Workload, default is Undefined, optional.
         Workload defines how to run your application code. Currently supported workload profile
         includes Service and Job.
     accessories: {str:any}, default is Undefined, optional.
@@ -37,7 +37,7 @@ schema AppConfiguration:
     """
 
     # Workload defines how to run your application code.
-    workload:                   wl.Workload
+    workload?:                   wl.Workload
 
     # Accessories defines a collection of accessories that will be attached to the workload.
     accessories?:                {str:any}
