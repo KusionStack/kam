@@ -1,4 +1,6 @@
 # KAM (Kusion Application Model)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FKusionStack%2Fkam.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FKusionStack%2Fkam?ref=badge_shield)
+
 
 The Kusion Application Model represents KusionStack's opinionated abstraction of the core concepts during application delivery, and serves as a model source for the `kusion` tool when interpreting application developers' intent.
 
@@ -18,3 +20,6 @@ The officially-maintained Kusion Modules are located in the [catalog](https://gi
 - [Kusion Module Concepts](https://www.kusionstack.io/docs/kusion/concepts/kusion-module)
 - [Kusion Module Developer Guide](https://www.kusionstack.io/docs/kusion/concepts/kusion-module/develop-guide)
 - [Kusion Module Scaffolding](https://github.com/KusionStack/kusion-module-scaffolding)
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FKusionStack%2Fkam.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FKusionStack%2Fkam?ref=badge_large)
